@@ -18,16 +18,14 @@
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbody>
+           <tbody>
                 <tr>
                     <td>Allen Bagsakan</td>
                     <td>allen.bagsakan@university.edu</td>
                     <td>BS Civil Engineering</td>
                     <td>5th Year</td>
                     <td>
-                        <a href="{{ route('students.show') }}" class="btn btn-info btn-sm text-white">View</a>
-                        <a href="{{ route('students.edit') }}" class="btn btn-warning btn-sm">Edit</a>
-                    </td>
+                        <x-actions />  </td>
                 </tr>
 
                 <tr>
@@ -36,8 +34,7 @@
                     <td>BS Tourism Management</td>
                     <td>3rd Year</td>
                     <td>
-                        <a href="{{ route('students.show') }}" class="btn btn-info btn-sm text-white">View</a>
-                        <a href="{{ route('students.edit') }}" class="btn btn-warning btn-sm">Edit</a>
+                        <x-actions />
                     </td>
                 </tr>
 
@@ -47,8 +44,7 @@
                     <td>BS Nursing</td>
                     <td>2nd Year</td>
                     <td>
-                        <a href="{{ route('students.show') }}" class="btn btn-info btn-sm text-white">View</a>
-                        <a href="{{ route('students.edit') }}" class="btn btn-warning btn-sm">Edit</a>
+                        <x-actions />
                     </td>
                 </tr>
 
@@ -58,8 +54,7 @@
                     <td>BS Information Technology</td>
                     <td>1st Year</td>
                     <td>
-                        <a href="{{ route('students.show') }}" class="btn btn-info btn-sm text-white">View</a>
-                        <a href="{{ route('students.edit') }}" class="btn btn-warning btn-sm">Edit</a>
+                        <x-actions />
                     </td>
                 </tr>
 
@@ -69,8 +64,7 @@
                     <td>BS Criminology</td>
                     <td>4th Year</td>
                     <td>
-                        <a href="{{ route('students.show') }}" class="btn btn-info btn-sm text-white">View</a>
-                        <a href="{{ route('students.edit') }}" class="btn btn-warning btn-sm">Edit</a>
+                        <x-actions />
                     </td>
                 </tr>
             </tbody>

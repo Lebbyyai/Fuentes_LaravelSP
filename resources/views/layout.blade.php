@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Portal</title>
+    <title>@yield('title', 'Student Portal')</title> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+<body style="background-color: #e6fffa;"> <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #cce4e4;">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">Student Portal</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
