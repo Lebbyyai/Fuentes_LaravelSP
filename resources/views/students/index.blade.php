@@ -19,54 +19,25 @@
                 </tr>
             </thead>
            <tbody>
-                <tr>
-                    <td>Allen Bagsakan</td>
-                    <td>allen.bagsakan@university.edu</td>
-                    <td>BS Civil Engineering</td>
-                    <td>5th Year</td>
-                    <td>
-                        <x-actions />  </td>
-                </tr>
-
-                <tr>
-                    <td>Maria Spacool</td>
-                    <td>maria.spacool@university.edu</td>
-                    <td>BS Tourism Management</td>
-                    <td>3rd Year</td>
-                    <td>
-                        <x-actions />
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Ana Bughatan</td>
-                    <td>ana.bughatan@university.edu</td>
-                    <td>BS Nursing</td>
-                    <td>2nd Year</td>
-                    <td>
-                        <x-actions />
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>John Dikit</td>
-                    <td>john.dikit@university.edu</td>
-                    <td>BS Information Technology</td>
-                    <td>1st Year</td>
-                    <td>
-                        <x-actions />
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Sampal Fukiko</td>
-                    <td>sampal.fukiko@university.edu</td>
-                    <td>BS Criminology</td>
-                    <td>4th Year</td>
-                    <td>
-                        <x-actions />
-                    </td>
-                </tr>
+                @foreach ($students as $student)
+    <tr>
+        <td>{{ $student->name }}</td>
+        <td>{{ $student->email }}</td>
+        <td>{{ $student->course }}</td>
+        <td>{{ $student->year_level }}</td>
+        <td>
+            <div class="d-flex gap-1">
+                <a href="{{ route('students.show', $student->id) }}" class="btn btn-info btn-sm text-white">View</a>
+                <a href="{{ route('students.edit', $student->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                <form action="{{ route('students.destroy', $student->id) }}" method="POST" onsubmit="return confirm('Delete?')" style="display:inline;">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </div>
+        </td>
+    </tr>
+@endforeach
             </tbody>
         </table>
     </div>

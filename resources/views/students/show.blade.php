@@ -8,25 +8,25 @@
         <h5 class="mb-0">Student Details</h5>
     </div>
     <div class="card-body bg-light">
-        <h3 class="card-title text-primary">Allen Bagsakan</h3>
-        <p class="text-muted">BS Civil Engineering | 5th Year</p>
+        <h3 class="card-title text-primary">{{ $student->name }}</h3>
+        
+        <p class="text-muted">{{ $student->course }} | Year {{ $student->year_level }}</p>
         <hr>
+
         <div class="mb-3">
             <strong>Email:</strong> <br>
-            allen.bagsakan@university.edu
+            {{ $student->email }}
         </div>
+
         <div class="mb-3">
-            <strong>Student ID:</strong> <br>
-            2023-00123
-        </div>
-        <div class="mb-3">
-            <strong>Address:</strong> <br>
-            Davao City, Philippines
+            <strong>Student ID (Database ID):</strong> <br>
+            {{ $student->id }}
         </div>
 
         <div class="d-flex justify-content-end gap-2 mt-4">
             <a href="{{ route('students.index') }}" class="btn btn-secondary">Back to List</a>
-            <a href="{{ route('students.edit') }}" class="btn btn-warning">Edit</a>
+            
+            <a href="{{ route('students.edit', $student->id) }}" class="btn btn-warning">Edit</a>
         </div>
     </div>
 </div>
